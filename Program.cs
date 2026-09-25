@@ -54,7 +54,7 @@ namespace TPN04
                 }
                 else 
                 { 
-                    throw new Exception("El precio no puede ser negativo"); 
+                    throw new Exception("El precio no puede ser negativo\n"); 
                 }
             } 
         }
@@ -69,7 +69,7 @@ namespace TPN04
                 }
                 else 
                 {
-                    throw new Exception("El precio no puede ser negativo");
+                    Console.WriteLine("El stock no puede ser negativo\n");
                 }
             }
         }
@@ -81,12 +81,11 @@ namespace TPN04
             Precio = precio;
             Stock = stock;
         }
-
         public bool aumentarStock(int cantidad) 
         {
             if (cantidad > 0)
             {
-                _stock += cantidad;
+                Stock += cantidad;
                 return true;
             }
             
@@ -97,7 +96,7 @@ namespace TPN04
         {
             if (cantidad <= _stock)
             {
-                _stock -= cantidad;
+                Stock -= cantidad;
                 return true;
             }
             else 
@@ -175,12 +174,12 @@ namespace TPN04
                 }
                 else
                 {
-                    Console.WriteLine("La cantidad ingresada debe ser positiva");
+                    Console.WriteLine("La cantidad ingresada debe ser positiva\n");
                 }   
             }
             else 
             {
-                Console.WriteLine("El producto no existe.");
+                Console.WriteLine("El producto no existe.\n");
             }
         }
 
